@@ -10,6 +10,8 @@ function Header() {
             src="/eliteLogo.png"
             alt="Elite Computer Institute"
             className="sm:w-54 w-40"
+            loading="lazy"
+            title="Elite Computer Institute"
           />
         </Link>
         <ul className="sm:flex gap-8 text-lg hidden ">
