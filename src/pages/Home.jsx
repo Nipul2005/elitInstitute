@@ -1,8 +1,33 @@
-import React from "react";
+import React, { use, useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import Cards from "../components/Cards";
+import EnquiryForm from "../components/EnquiryForm";
+import CourseCards from "../components/CourseCards";
+import { modulerJSON } from "../JSON/courseJSON";
 
 function Home() {
+  const [indx, setIndx] = useState(0);
+  const maxIndx = modulerJSON.length - 1 - 3;
+
+  function right() {
+    if (indx < maxIndx) {
+      setIndx((prev) => prev + 1);
+    }
+  }
+
+  function left() {
+    if (indx > 0) {
+      setIndx((prev) => prev - 1);
+    }
+  }
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     right();
+  //   }, 2000);
+  //   return () => clearInterval(interval);
+  // }, [indx]);
+
   return (
     <>
       <Helmet>
@@ -43,15 +68,15 @@ function Home() {
         </script>
       </Helmet>
 
-      <div className="bg-[url(/1.jpeg)] bg-center bg-cover sm:p-10 p-5">
+      <section className="bg-[url(/1.jpeg)] bg-center bg-cover sm:p-10 p-5">
         <h1 className="md:text-[4rem] sm:text-[3rem] text-3xl text-center flex flex-col px-10 sm:py-30  py-20 text-black bg-white/70 container mx-auto rounded-full">
           Unlock Your Learning Potential <span>Today! With</span>
           <span className="underline decoration-secondary decoration-2 underline-offset-8 text-primary">
             Elite Computer Institute
           </span>
         </h1>
-      </div>
-      <div className="w-full sm:py-20 py-7 sm:px-0 px-4 sm:container sm:mx-auto flex flex-col justify-center items-center">
+      </section>
+      <section className="w-full sm:py-20 py-7 sm:px-0 px-4 sm:container sm:mx-auto flex flex-col justify-center items-center">
         <p className="sm:text-center sm:max-w-2/3 sm:leading-10 sm:text-2xl text-lg">
           At{" "}
           <span className="underline decoration-secondary decoration-1 underline-offset-2 text-primary">
@@ -61,18 +86,9 @@ function Home() {
           , we provide comprehensive computer training to help you succeed in
           today’s digital world. Join our courses and transform your career.
         </p>
-        <form className="w-full flex flex-col sm:flex-row gap-4 sm:mt-10 mt-5 justify-center items-center">
-          <input
-            type="text"
-            placeholder="Enter your Mobile Number"
-            className="border border-gray-300 px-4 py-2 rounded-full sm:w-2/6 outline-primary transition duration-200 ease-in-out focus:border-primary w-full"
-          />
-          <button className="bg-primary text-white px-6 py-2 rounded-full cursor-pointer">
-            Enquiry Now
-          </button>
-        </form>
-      </div>
-      <div className="w-full sm:pb-20 sm:py-0 pb-7 sm:container sm:mx-auto flex flex-col sm:flex-row">
+        <EnquiryForm />
+      </section>
+      <section className="w-full sm:pb-20 sm:py-0 pb-7 sm:container sm:mx-auto flex flex-col lg:flex-row">
         <div className="flex-1">
           <img
             src="/intro_img.webp"
@@ -82,7 +98,7 @@ function Home() {
             title="Mr. Arun Giri"
           />
         </div>
-        <div className="w-full h-full pl-5 px-4 sm:py-5 py-4 flex-1">
+        <div className="w-full h-full flex-1 lg:p-4 sm:p-0 sm:pt-4 pt-6 px-4">
           <div className="w-full space-y-5">
             <h2 className="text-3xl text-white bg-gradient-to-r from-65% from-primary to-white p-2 pl-4">
               Our Mission and Team
@@ -106,7 +122,24 @@ function Home() {
           </div>
           <Cards />
         </div>
-      </div>
+      </section>
+      <section className="w-full sm:py-20 py-5 sm:mx-auto bg-black/5 relative px-4">
+        <h2 className="text-4xl text-primary sm:text-center mb-5 font-semibold">Our Courses</h2>
+        <CourseCards indx={indx} />
+        {indx !== 0 && (
+          <i
+            className="ri-arrow-left-double-fill absolute top-1/2 left-16 transform -translate-y-1/2 bg-white w-8 h-8 sm:flex justify-center items-center rounded-full cursor-pointer hidden"
+            onClick={() => left()}
+          ></i>
+        )}
+
+        {indx < modulerJSON.length - maxIndx-1 && (
+          <i
+            className="ri-arrow-right-double-fill absolute top-1/2 right-15 transform -translate-y-1/2 bg-white w-8 h-8 sm:flex justify-center items-center rounded-full cursor-pointer hidden"
+            onClick={() => right()}
+          ></i>
+        )}
+      </section>
     </>
   );
 }

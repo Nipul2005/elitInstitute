@@ -22,7 +22,7 @@ const modulerJSON = [
 
     durationFee: {
       duration: "6 months",
-      Fee: "Not Revield",
+      Fee: "Not revealed",
       registerationFee: "200",
       examFee: "200",
     },
@@ -58,7 +58,7 @@ const modulerJSON = [
     ],
     durationFee: {
       duration: "12 months",
-      Fee: "Not Revield",
+      Fee: "Not revealed",
       registerationFee: "200",
       examFee: "200",
     },
@@ -90,7 +90,7 @@ const modulerJSON = [
     ],
     durationFee: {
       duration: "12 months",
-      Fee: "Not Revield",
+      Fee: "Not revealed",
       registerationFee: "200",
       examFee: "200",
     },
@@ -122,7 +122,7 @@ const modulerJSON = [
     ],
     durationFee: {
       duration: "6 months",
-      Fee: "Not Revield",
+      Fee: "Not revealed",
       registerationFee: "200",
       examFee: "200",
     },
@@ -152,7 +152,7 @@ const modulerJSON = [
     ],
     durationFee: {
       duration: "12 months",
-      Fee: "Not Revield",
+      Fee: "Not revealed",
       registerationFee: "200",
       examFee: "200",
     },
@@ -179,7 +179,7 @@ const modulerJSON = [
 
     durationFee: {
       duration: "6 months",
-      Fee: "Not Revield",
+      Fee: "Not revealed",
       registerationFee: "200",
       examFee: "200",
     },
@@ -205,7 +205,7 @@ const modulerJSON = [
 
     durationFee: {
       duration: "6 months",
-      Fee: "Not Revield",
+      Fee: "Not revealed",
       registerationFee: "200",
       examFee: "200",
     },
@@ -235,7 +235,7 @@ const modulerJSON = [
     ],
     durationFee: {
       duration: "12 months",
-      Fee: "Not Revield",
+      Fee: "Not revealed",
       registerationFee: "200",
       examFee: "200",
     },
@@ -262,7 +262,7 @@ const modulerJSON = [
 
     durationFee: {
       duration: "6 months",
-      Fee: "Not Revield",
+      Fee: "Not revealed",
       registerationFee: "200",
       examFee: "200",
     },
@@ -285,7 +285,7 @@ const modulerJSON = [
 
     durationFee: {
       duration: "3 months",
-      Fee: "Not Revield",
+      Fee: "Not revealed",
       registerationFee: "200",
       examFee: "200",
     },
@@ -313,7 +313,7 @@ const modulerJSON = [
 
     durationFee: {
       duration: "6 months",
-      Fee: "Not Revield",
+      Fee: "Not revealed",
       registerationFee: "200",
       examFee: "200",
     },
@@ -352,7 +352,7 @@ const modulerJSON = [
     ],
     durationFee: {
       duration: "12 months",
-      Fee: "Not Revield",
+      Fee: "Not revealed",
       registerationFee: "200",
       examFee: "200",
     },
@@ -378,3 +378,5 @@ const linearJSON = {
 };
 const crashCourseJSON =
   "Advance Excel, Auto Card, Ms-Access HTML JAVA, C Language, C++, Language, 3D Max, Visual Basic, Advance Tally, Tally Taxation, Busy, VFX, Flash, After Effect, PHP, J Query, Bootstrap, Hosting, SEO";
+
+export { modulerJSON, linearJSON, crashCourseJSON };
