@@ -12,7 +12,7 @@ function CourseCards({ indx }) {
       >
         {modulerJSON.map((module, idx) => (
           <div
-            className="sm:w-2/6 w-full h-auto shrink-0 cursor-pointer select-none border-r-4 border-white rounded-xl overflow-hidden"
+            className="sm:w-2/6 w-full h-auto shrink-0 cursor-pointer select-none border-r-4 border-transparent rounded-xl overflow-hidden"
             key={idx}
           >
             <h2 className="text-3xl bg-black/80 text-white text-center py-1">

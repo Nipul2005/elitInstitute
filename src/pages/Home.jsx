@@ -63,7 +63,7 @@ function Home() {
         </script>
       </Helmet>
 
-      <HeroSection />
+      <HeroSection img={"/1.jpeg"} text={"Unlock Your Learning Potential"} spanText={"Today! With"}/>
       <section className="w-full sm:py-18 py-7 sm:px-0 px-4 sm:container sm:mx-auto flex flex-col justify-center items-center">
         <p className="sm:text-center sm:max-w-2/3 sm:leading-10 sm:text-2xl text-lg">
           At{" "}
@@ -128,7 +128,7 @@ function Home() {
       </section>
       <section className="w-full h-auto sm:py-18 py-7 sm:px-0 px-4 sm:container sm:mx-auto flex flex-col justify-center items-center">
         <div
-          class="elfsight-app-8828fcc1-9b3c-4ea7-9961-9fc3401e4152"
+          className="elfsight-app-8828fcc1-9b3c-4ea7-9961-9fc3401e4152"
           data-elfsight-app-lazy
         ></div>
       </section>
