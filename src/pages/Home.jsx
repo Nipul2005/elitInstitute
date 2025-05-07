@@ -4,6 +4,8 @@ import Cards from "../components/Cards";
 import EnquiryForm from "../components/EnquiryForm";
 import CourseCards from "../components/CourseCards";
 import { modulerJSON } from "../JSON/courseJSON";
+import HeroSection from "../design/HeroSection";
+import Heading from "../design/Heading";
 
 function Home() {
   const [indx, setIndx] = useState(0);
@@ -61,14 +63,7 @@ function Home() {
         </script>
       </Helmet>
 
-      <section className="bg-[url(/1.jpeg)] bg-center bg-cover sm:p-10 p-5">
-        <h1 className="md:text-[4rem] sm:text-[3rem] text-3xl text-center flex flex-col px-10 sm:py-30  py-20 text-black bg-white/70 container mx-auto rounded-full">
-          Unlock Your Learning Potential <span>Today! With</span>
-          <span className="underline decoration-secondary decoration-2 underline-offset-8 text-primary">
-            Elite Computer Institute
-          </span>
-        </h1>
-      </section>
+      <HeroSection />
       <section className="w-full sm:py-18 py-7 sm:px-0 px-4 sm:container sm:mx-auto flex flex-col justify-center items-center">
         <p className="sm:text-center sm:max-w-2/3 sm:leading-10 sm:text-2xl text-lg">
           At{" "}
@@ -93,9 +88,7 @@ function Home() {
         </div>
         <div className="w-full h-full flex-1 lg:p-4 sm:p-0 sm:pt-4 pt-6 px-4">
           <div className="w-full space-y-5">
-            <h2 className="text-4xl text-white bg-gradient-to-r from-65% from-primary to-white p-2 pl-4">
-              Our Mission and Team
-            </h2>
+            <Heading text="Our Mission and Team" />
             <p className="text-lg text-black">
               At{" "}
               <span
@@ -117,9 +110,7 @@ function Home() {
         </div>
       </section>
       <section className="w-full h-auto sm:py-18 py-7 sm:mx-auto bg-black/5 relative px-4 ">
-        <h2 className="text-4xl mb-5 text-white bg-gradient-to-r from-65% from-primary to-white p-2 pl-4 sm:container sm:mx-auto">
-          Our Courses
-        </h2>
+        <Heading text="Our Courses" />
         <CourseCards indx={indx} />
         {indx !== 0 && (
           <i
@@ -134,6 +125,12 @@ function Home() {
             onClick={() => right()}
           ></i>
         )}
+      </section>
+      <section className="w-full h-auto sm:py-18 py-7 sm:px-0 px-4 sm:container sm:mx-auto flex flex-col justify-center items-center">
+        <div
+          class="elfsight-app-8828fcc1-9b3c-4ea7-9961-9fc3401e4152"
+          data-elfsight-app-lazy
+        ></div>
       </section>
     </>
   );

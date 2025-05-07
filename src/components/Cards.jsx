@@ -4,7 +4,7 @@ function Cards() {
   return (
     <div className="w-full mt-4 space-y-2">
       <div className="flex sm:flex-row  flex-col justify-start items-start gap-x-2 gap-y-2">
-        <div className="flex-1 border-2 border-primary">
+        <div className="flex-1 border-2 border-primary rounded-xl overflow-hidden">
           <div className="flex gap-2 justify-start items-start pr-2">
             <i className="ri-graduation-cap-line text-3xl bg-primary rounded-br-lg w-12 h-12 flex justify-center items-center text-white"></i>
             <h2 className="text-xl font-semibold text-primary self-center">
@@ -17,7 +17,7 @@ function Cards() {
             vital computer skills for the modern workforce.
           </p>
         </div>
-        <div className="flex-1 border-2 border-primary">
+        <div className="flex-1 border-2 border-primary rounded-xl overflow-hidden">
           <div className="flex gap-2 justify-start items-start pr-2">
             <i className="ri-presentation-line text-3xl bg-primary w-12 h-12 rounded-br-lg flex justify-center items-center text-white"></i>
             <h2 className="text-xl font-semibold text-primary self-center">
@@ -32,7 +32,7 @@ function Cards() {
         </div>
       </div>
       <div className="flex sm:flex-row flex-col justify-start items-start gap-x-2 gap-y-2">
-        <div className="flex-1 border-2 border-primary">
+        <div className="flex-1 border-2 border-primary rounded-xl overflow-hidden">
           <div className="flex gap-2 justify-start items-start pr-2">
             <i className="ri-bookmark-3-line text-3xl bg-primary rounded-br-lg w-12 h-12 flex justify-center items-center text-white"></i>
             <h2 className="text-xl font-semibold text-primary self-center">
@@ -44,7 +44,7 @@ function Cards() {
             education, ensuring high-quality instruction.
           </p>
         </div>
-        <div className="flex-1 border-2 border-primary">
+        <div className="flex-1 border-2 border-primary rounded-xl overflow-hidden">
           <div className="flex gap-2 justify-start items-start pr-2">
             <i className="ri-user-2-line text-3xl bg-primary rounded-br-lg w-12 h-12 flex justify-center items-center text-white"></i>
             <h2 className="text-xl font-semibold text-primary self-center">
