@@ -7,7 +7,7 @@ import { modulerJSON } from "../JSON/courseJSON";
 
 function Home() {
   const [indx, setIndx] = useState(0);
-  const maxIndx = modulerJSON.length - 1 - 3;
+  const maxIndx = modulerJSON.length - 1 - 5;
 
   function right() {
     if (indx < maxIndx) {
@@ -20,13 +20,6 @@ function Home() {
       setIndx((prev) => prev - 1);
     }
   }
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     right();
-  //   }, 2000);
-  //   return () => clearInterval(interval);
-  // }, [indx]);
 
   return (
     <>
@@ -76,7 +69,7 @@ function Home() {
           </span>
         </h1>
       </section>
-      <section className="w-full sm:py-20 py-7 sm:px-0 px-4 sm:container sm:mx-auto flex flex-col justify-center items-center">
+      <section className="w-full sm:py-18 py-7 sm:px-0 px-4 sm:container sm:mx-auto flex flex-col justify-center items-center">
         <p className="sm:text-center sm:max-w-2/3 sm:leading-10 sm:text-2xl text-lg">
           At{" "}
           <span className="underline decoration-secondary decoration-1 underline-offset-2 text-primary">
@@ -88,7 +81,7 @@ function Home() {
         </p>
         <EnquiryForm />
       </section>
-      <section className="w-full sm:pb-20 sm:py-0 pb-7 sm:container sm:mx-auto flex flex-col lg:flex-row">
+      <section className="w-full sm:pb-18 sm:py-0 pb-7 sm:container sm:mx-auto flex flex-col lg:flex-row">
         <div className="flex-1">
           <img
             src="/intro_img.webp"
@@ -100,7 +93,7 @@ function Home() {
         </div>
         <div className="w-full h-full flex-1 lg:p-4 sm:p-0 sm:pt-4 pt-6 px-4">
           <div className="w-full space-y-5">
-            <h2 className="text-3xl text-white bg-gradient-to-r from-65% from-primary to-white p-2 pl-4">
+            <h2 className="text-4xl text-white bg-gradient-to-r from-65% from-primary to-white p-2 pl-4">
               Our Mission and Team
             </h2>
             <p className="text-lg text-black">
@@ -123,8 +116,10 @@ function Home() {
           <Cards />
         </div>
       </section>
-      <section className="w-full sm:py-20 py-5 sm:mx-auto bg-black/5 relative px-4">
-        <h2 className="text-4xl text-primary sm:text-center mb-5 font-semibold">Our Courses</h2>
+      <section className="w-full h-auto sm:py-18 py-7 sm:mx-auto bg-black/5 relative px-4 ">
+        <h2 className="text-4xl mb-5 text-white bg-gradient-to-r from-65% from-primary to-white p-2 pl-4 sm:container sm:mx-auto">
+          Our Courses
+        </h2>
         <CourseCards indx={indx} />
         {indx !== 0 && (
           <i
@@ -133,7 +128,7 @@ function Home() {
           ></i>
         )}
 
-        {indx < modulerJSON.length - maxIndx-1 && (
+        {indx < modulerJSON.length - maxIndx - 3 && (
           <i
             className="ri-arrow-right-double-fill absolute top-1/2 right-15 transform -translate-y-1/2 bg-white w-8 h-8 sm:flex justify-center items-center rounded-full cursor-pointer hidden"
             onClick={() => right()}
