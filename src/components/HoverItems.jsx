@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 function HoverItems() {
+  const [show, setShow] = useState(false);
   return (
-    <div className="fixed top-1/2 bg-primary z-40 p-2 text-white flex justify-start items-center gap-x-3 rounded-tl-full rounded-bl-full -right-50 hover:right-0 transition-all duration-300 ease-in-out cursor-pointer">
+    <div
+      className="fixed top-1/2 bg-primary z-40 p-2 text-white flex justify-start items-center gap-x-3 rounded-tl-full rounded-bl-full hover:right-0 transition-all duration-300 ease-in-out cursor-pointer"
+      onClick={() => setShow((prev) => !prev)}
+      onMouseEnter={() => setShow(true)}
+      onMouseLeave={() => setShow(false)}
+      style={{ right: show ? "0px" : "-12.5rem" }}
+    >
       <i className="ri-arrow-left-double-line text-xl border-r w-6 h-6 flex justify-center items-center pr-2"></i>
       <a href="tel:9205470224" title="call us">
         <i className="ri-phone-line text-xl"></i>
