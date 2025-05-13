@@ -6,7 +6,7 @@ function CourseCards({ indx }) {
     <div className="w-full h-auto sm:container sm:mx-auto flex flex-wrap justify-center items-start">
       {modulerJSON.map((module, idx) => (
         <div
-          className="sm:w-2/6 w-full h-auto shrink-0 cursor-pointer overflow-hidden border-5 border-transparent "
+          className="sm:w-2/6 w-full h-auto shrink-0 cursor-pointer overflow-hidden border-8 border-transparent "
           key={idx}
         >
           <div className="w-full h-auto">

@@ -6,6 +6,7 @@ import CourseCards from "../components/CourseCards";
 import { modulerJSON } from "../JSON/courseJSON";
 import HeroSection from "../design/HeroSection";
 import Heading from "../design/Heading";
+import Feature from "../components/Feature";
 
 function Home() {
   const [indx, setIndx] = useState(0);
@@ -63,8 +64,12 @@ function Home() {
         </script>
       </Helmet>
 
-      <HeroSection img={"/1.jpeg"} text={"Unlock Your Learning Potential"} spanText={"Today! With"}/>
-      <section className="w-full sm:py-18 py-7 sm:px-0 px-4 sm:container sm:mx-auto flex flex-col justify-center items-center">
+      <HeroSection
+        img={"/1.jpeg"}
+        text={"Unlock Your Learning Potential"}
+        spanText={"Today! With"}
+      />
+      <section className="w-full sm:py-18 py-7 px-4 sm:container sm:mx-auto flex flex-col justify-center items-center">
         <p className="sm:text-center sm:max-w-2/3 sm:leading-10 sm:text-2xl text-lg">
           At{" "}
           <span className="underline decoration-secondary decoration-1 underline-offset-2 text-primary">
@@ -109,7 +114,7 @@ function Home() {
           <Cards />
         </div>
       </section>
-      <section className="w-full h-auto sm:py-18 py-7 sm:mx-auto bg-black/5 relative px-4 ">
+      <section className="w-full h-auto sm:py-18 py-7 sm:mx-auto bg-black/5 relative px-4">
         <Heading text="Our Courses" />
         <CourseCards indx={indx} />
         {indx !== 0 && (
@@ -126,12 +131,11 @@ function Home() {
           ></i>
         )}
       </section>
-      <section className="w-full h-auto sm:py-18 py-7 sm:px-0 px-4 sm:container sm:mx-auto flex flex-col justify-center items-center">
-        <div
-          className="elfsight-app-8828fcc1-9b3c-4ea7-9961-9fc3401e4152"
-          data-elfsight-app-lazy
-        ></div>
-      </section>
+      <Feature />
+      <div
+        className="elfsight-app-8828fcc1-9b3c-4ea7-9961-9fc3401e4152 w-full bg-black/5 sm:py-18 py-7 sm:mx-auto px-4"
+        data-elfsight-app-lazy
+      ></div>
     </>
   );
 }
