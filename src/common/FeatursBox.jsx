@@ -1,4 +1,4 @@
-function FeatursBox({ indx, arr, scroll }) {
+function FeatursBox({  arr, scroll }) {
 
   return (
     <div
