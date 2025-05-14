@@ -26,7 +26,7 @@ function Footer() {
                 className="w-full flex justify-between items-start gap-x-4"
                 key={idx}
               >
-                <p key={idx} className="w-full text-sm text-start">
+                <p className="w-full text-sm text-start">
                   {module.name}
                 </p>
                 <span className="w-full flex flex-col justify-start items-start text-white/80 text-sm gap-y-3 text-start">
