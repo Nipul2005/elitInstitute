@@ -10,7 +10,7 @@ function FeatursBox({ indx, arr, scroll }) {
           className="sm:w-2/6 w-full h-auto border-2 border-primary overflow-hidden shrink-0"
           key={index}
         >
-          <i className="ri-graduation-cap-line text-3xl bg-primary rounded-br-lg w-12 h-12 flex justify-center items-center text-white"></i>
+          <i className="ri-graduation-cap-line text-3xl bg-primary w-12 h-12 flex justify-center items-center text-white"></i>
           <div className="space-y-2 px-2 mt-2 pb-3">
             <h2 className="text-xl font-semibold text-primary self-center">
               100 students trained

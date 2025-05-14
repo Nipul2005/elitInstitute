@@ -364,15 +364,15 @@ const linearJSON = {
   course: [
     {
       name: "COMPUTER TYPING (HINDI/ENGLISH)",
-      1: "1 Year :- Diploma Course",
-      2: "6 Month :- Certificate Course",
-      3: "3 Months :- Basic Course",
+      first: "1 Year :- Diploma Course",
+      second: "6 Month :- Certificate Course",
+      third: "3 Months :- Basic Course",
     },
     {
       name: "SHORTHAND (HINDI/ENGLISH)",
-      1: "1 Year :- Diploma Course",
-      2: "6 Month :- Certificate Course",
-      3: "3 Months :- Basic Course",
+      first: "1 Year :- Diploma Course",
+      second: "6 Month :- Certificate Course",
+      third: "3 Months :- Basic Course",
     },
   ],
 };

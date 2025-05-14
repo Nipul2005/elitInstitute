@@ -9,21 +9,6 @@ import Heading from "../design/Heading";
 import Feature from "../components/Feature";
 
 function Home() {
-  const [indx, setIndx] = useState(0);
-  const maxIndx = modulerJSON.length - 1 - 5;
-
-  function right() {
-    if (indx < maxIndx) {
-      setIndx((prev) => prev + 1);
-    }
-  }
-
-  function left() {
-    if (indx > 0) {
-      setIndx((prev) => prev - 1);
-    }
-  }
-
   return (
     <>
       <Helmet>
@@ -114,22 +99,9 @@ function Home() {
           <Cards />
         </div>
       </section>
-      <section className="w-full h-auto sm:py-18 py-7 sm:mx-auto bg-black/5 relative px-4">
+      <section className="w-full h-auto sm:py-18 py-7 sm:mx-auto bg-primary/5 relative px-4">
         <Heading text="Our Courses" />
-        <CourseCards indx={indx} />
-        {indx !== 0 && (
-          <i
-            className="ri-arrow-left-double-fill absolute top-1/2 left-16 transform -translate-y-1/2 bg-white w-8 h-8 sm:flex justify-center items-center rounded-full cursor-pointer hidden"
-            onClick={() => left()}
-          ></i>
-        )}
-
-        {indx < modulerJSON.length - maxIndx - 3 && (
-          <i
-            className="ri-arrow-right-double-fill absolute top-1/2 right-15 transform -translate-y-1/2 bg-white w-8 h-8 sm:flex justify-center items-center rounded-full cursor-pointer hidden"
-            onClick={() => right()}
-          ></i>
-        )}
+        <CourseCards/>
       </section>
       <Feature />
       <div

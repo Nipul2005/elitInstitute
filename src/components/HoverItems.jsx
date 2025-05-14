@@ -8,7 +8,7 @@ function HoverItems() {
       onClick={() => setShow((prev) => !prev)}
       onMouseEnter={() => setShow(true)}
       onMouseLeave={() => setShow(false)}
-      style={{ right: show ? "0px" : "-12.5rem" }}
+      style={{ right: show ? "0px" : "-6.25rem" }}
     >
       <i className="ri-arrow-left-double-line text-xl border-r w-6 h-6 flex justify-center items-center pr-2"></i>
       <a href="tel:9205470224" title="call us">
@@ -24,9 +24,7 @@ function HoverItems() {
       >
         <i className="ri-whatsapp-line text-xl"></i>
       </a>
-      <i className="ri-linkedin-line text-xl"></i>
-      <i className="ri-facebook-line text-xl"></i>
-      <i className="ri-instagram-line text-xl"></i>
+      
     </div>
   );
 }
