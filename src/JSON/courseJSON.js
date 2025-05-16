@@ -16,7 +16,7 @@ const modulerJSON = [
       {
         name: "DASHBOARD & VBA",
         topics:
-          "Macro, VBA (Visual Basic Applications), SQL Power Point (Ofcial Presentation)",
+          "Macro, VBA (Visual Basic Applications), SQL Power Point (Official Presentation)",
       },
     ],
 
@@ -358,7 +358,6 @@ const modulerJSON = [
     },
   },
 ];
-
 const linearJSON = {
   name: "Typing & ShortHand",
   course: [
