@@ -10,7 +10,7 @@ function CourseDesign({ module, change }) {
       <div className="flex-1 ">
         <div className="overflow-hidden sm:rounded-xl">
           <img
-            src="http://localhost:5173/course_img.jpg"
+            src="/course_img.jpg"
             alt={module.fullName}
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
             loading="lazy"
