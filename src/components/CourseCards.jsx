@@ -1,4 +1,5 @@
 import { modulerJSON } from "../JSON/courseJSON";
+import { Link } from "react-router-dom";
 
 function CourseCards() {
   return (
@@ -17,9 +18,11 @@ function CourseCards() {
             </h2>
             <h2 className="text-xl text-center mt-2">{module.fullName}</h2>
           </div>
-          <button className="w-full bg-primary rounded-b-3xl text-white text-lg cursor-pointer py-2 hover:bg-primary/80 duration-200">
-            know More
-          </button>
+          <Link to={`/courses/#${module.shortName}`}>
+            <button className="w-full bg-primary rounded-b-3xl text-white text-lg cursor-pointer py-2 hover:bg-primary/80 duration-200">
+              know More
+            </button>
+          </Link>
         </div>
       ))}
     </div>
