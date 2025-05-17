@@ -37,7 +37,7 @@ function CourseDesign({ module, change }) {
           </p>
         </span>
       </div>
-      <div className="flex-1 w-full sm:p-0 px-4">
+      <div className="flex-1 w-full sm:p-0">
         <Heading text={module.fullName} />
         <div className="w-full flex flex-col justify-start items-start gap-y-5 pl-4">
           {module.modules.map((module, idx) => (
