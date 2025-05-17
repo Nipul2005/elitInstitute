@@ -1,13 +1,15 @@
 import Heading from "./Heading";
 
-function CourseDesign({ module, change }) {
+function CourseDesign({ module, is }) {
   return (
-    <section
-
+    <div
       id={module.shortName}
-      className="w-full h-auto relative flex lg:flex-row flex-col justify-start items-start gap-x-8 gap-y-6 sm:py-18 pb-7 px-4"
+      className="w-full h-auto relative flex lg:flex-row flex-col justify-start items-start gap-x-8 gap-y-6 border-t-5 border-primary/10  sm:py-18 py-8"
+      style={{
+        borderTopWidth: is === 0 ? 0 : "5px",
+      }}
     >
-      <div className="flex-1 ">
+      <div className="flex-1 flex flex-col justify-start items-start">
         <div className="overflow-hidden sm:rounded-xl">
           <img
             src="/course_img.jpg"
@@ -16,7 +18,7 @@ function CourseDesign({ module, change }) {
             loading="lazy"
           />
         </div>
-        <span className="w-full flex justify-start items-start mt-6 gap-x-5 text-sm text-black/65 px-4">
+        <span className="w-full flex justify-start items-start mt-6 gap-x-5 text-sm text-black/65">
           <p>
             <span className="text-primary font-semibold text-md">
               Duration :-
@@ -37,12 +39,12 @@ function CourseDesign({ module, change }) {
           </p>
         </span>
       </div>
-      <div className="flex-1 w-full sm:p-0">
+      <div className="flex-1 w-full">
         <Heading text={module.fullName} />
-        <div className="w-full flex flex-col justify-start items-start gap-y-5 pl-4">
+        <div className="w-full flex flex-col justify-start items-start gap-y-5">
           {module.modules.map((module, idx) => (
             <div
-              className="w-full flex flex-col justify-start items-start gap-y-2"
+              className="w-full flex flex-col justify-start items-start gap-y-2 border-b border-primary/10 pb-5"
               key={idx}
             >
               <h3 className="text-xl text-primary">
@@ -53,12 +55,12 @@ function CourseDesign({ module, change }) {
               </p>
             </div>
           ))}
-          <button className="bg-primary duration-200 text-white px-6 py-2 rounded-full cursor-pointer self-end hover:bg-primary/70">
+          <button className="bg-primary sm:w-auto w-full duration-200 text-white px-6 py-2 rounded-full cursor-pointer self-end hover:bg-primary/70">
             Enroll Now
           </button>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 

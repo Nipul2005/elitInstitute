@@ -2,11 +2,11 @@ import { useLocation, useNavigate } from "react-router-dom";
 import CourseDesign from "../design/CourseDesign";
 import HeroSection from "../design/HeroSection";
 import { modulerJSON } from "../JSON/courseJSON";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function Courses() {
   const location = useLocation();
-
+  const [width, setWidth] = useState(0);
   useEffect(() => {
     const hash = location.hash.replace("#", "");
     if (hash) {
@@ -17,6 +17,10 @@ function Courses() {
       window.scrollTo(0, 0);
     };
   }, [location]);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, []);
   return (
     <>
       <HeroSection
@@ -24,19 +28,11 @@ function Courses() {
         img={"/course_img.jpg"}
         spanText={"Courses"}
       />
-      <div className="w-full sm:container sm:mx-auto sm:p-0 pt-7">
+      <section className="w-full sm:container sm:mx-auto px-4 flex flex-col justify-start items-start">
         {modulerJSON.map((module, idx) => (
-          <div className="space-y-7" key={idx}>
-            {idx !== 0 && (
-              <hr className="w-full h-1 bg-primary/10 border-transparent rounded-full" />
-            )}
-            <CourseDesign
-              module={module}
-              change={(idx + 1) % 2 == 0 ? true : false}
-            />
-          </div>
+            <CourseDesign module={module} key={idx} is={idx}/>
         ))}
-      </div>
+      </section>
     </>
   );
 }
