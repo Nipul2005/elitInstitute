@@ -1,8 +1,7 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
 
-function Header() {
+function Header({ show, setShow }) {
   return (
     <header className="w-full h-auto py-3 bg-white border-b border-primary/90 sticky top-0 z-10">
       <nav className="flex sm:justify-around justify-between items-center sm:px-0 px-5">
@@ -21,7 +20,7 @@ function Header() {
             <Link to="/contact">Contact</Link>
           </li>
         </ul>
-        <i className="ri-menu-2-line text-black text-2xl sm:hidden cursor-pointer"></i>
+        <i className="ri-menu-2-line text-black text-2xl sm:hidden cursor-pointer" onClick={() => setShow((prev) => !prev)}></i>
         <button className="bg-primary text-white px-6 py-2 rounded-full cursor-pointer hidden sm:block">
           Enroll Now
         </button>

@@ -4,7 +4,7 @@ function HoverItems() {
   const [show, setShow] = useState(false);
   return (
     <div
-      className="fixed top-1/2 bg-primary z-40 p-2 text-white flex justify-start items-center gap-x-3 rounded-tl-full rounded-bl-full hover:right-0 transition-all duration-300 ease-in-out cursor-pointer"
+      className="fixed top-1/2 bg-primary z-20 p-2 text-white flex justify-start items-center gap-x-3 rounded-tl-full rounded-bl-full hover:right-0 transition-all duration-300 ease-in-out cursor-pointer"
       onClick={() => setShow((prev) => !prev)}
       onMouseEnter={() => setShow(true)}
       onMouseLeave={() => setShow(false)}
